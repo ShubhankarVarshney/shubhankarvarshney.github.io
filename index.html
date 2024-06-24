@@ -1,128 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubhankar Varshney</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #f4f4f4;
-        }
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Shubhankar Varshney</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-        header {
-            background: #333;
-            color: white;
-            padding: 1rem;
-        }
+		<!-- Wrapper -->
+		<div id="wrapper">
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
 
-        nav ul li {
-            margin: 0 1rem;
-        }
+					<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong> Shubhankar Varshney</strong></a>
+						<img src="UVa.png" alt="" height="80" width="20" align="right"/>
+					</header>
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+					<!-- Banner -->
+					<section id="banner">
+						<div class="content">
+							<header>
+								<p>I am a PhD student in the Department of Computer Science</a><br>at the Purdue University</a>. My current research interest is in Computational Topology. I am interested in problems that lie in the intersection of multiple fields.</a>.</p>
+							</header>
+							<p>I was born and brought up in Aligarh. In seventh grade I read "The Man who knew Infinity" by Robert Kanigel, a biography of the famous Mathematician Srinivasa Ramanujan. From there I got to know about </a></p>
+						</div>
+						<span class="image object">
+							<img src="yourphoto.jpeg" alt="" />
+						</span>
+					</section>
+	
+				</div>
+			</div>
 
-        main {
-            display: flex;
-            flex: 1;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<div class="inner">
 
-        .content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            width: 100%;
-        }
+					<!-- Menu -->
+					<nav id="menu">
+						<header class="major">
+							<h2>Menu</h2>
+						</header>
+						<ul>
+							<li><a href="index.html">Homepage</a></li>
+							<li><a href="Shubhankar_Varshney_CV.pdf">CV</a></li>
+							<li><a href="hobbies.html">Hobbies</a></li>
+                            <li><a href="kavyaras.html">KavyaRas</a></li>
+						</ul>
+					</nav>
 
-        .text {
-            max-width: 60%;
-        }
+					<!-- Section -->
+					<section>
+						<header class="major">
+							<h2>Get in touch</h2>
+						</header>
+						<p>If you want to contact me, below is my email-id. 
+						</p>
+					</section>
 
-        .text h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
+					<!-- Footer -->
+					<footer id="footer">
+						<ul class="contact">
+							<li class="icon solid fa-envelope">email: <a href="mailto:svarshn@purdue.edu">svarshn@purdue.edu</a></li>
+						</ul>
+					</footer>
 
-        .text p {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
+				</div>
+			</div>
+		</div>
 
-        .text a {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            color: white;
-            background: #007BFF;
-            text-decoration: none;
-            border-radius: 4px;
-        }
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-        .photo img {
-            border-radius: 8px;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="kavyaras.html">Kavyaras</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="talks.html">Talks</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="content">
-            <div class="text">
-                <h1>Shubhankar Varshney</h1>
-                <p>A brief description about yourself.</p>
-                <a href="Shubhankar_Varshney_CV.pdf" target="_blank">Download CV</a>
-            </div>
-            <div class="photo">
-                <img src="yourphoto.jpeg" alt="Shubhankar Varshney">
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Shubhankar Varshney. All rights reserved.</p>
-    </footer>
-</body>
+	</body>
 </html>
