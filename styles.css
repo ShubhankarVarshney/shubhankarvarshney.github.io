@@ -1,55 +1,52 @@
+/* General styling */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: #f4f4f4;
 }
 
 header {
     background: #333;
-    color: white;
-    padding: 1rem;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+header h1 {
+    margin: 0;
+    font-size: 2rem;
 }
 
 main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-}
-
-img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
     padding: 1rem;
 }
 
+/* Individual article styling */
+article {
+    background: #fff;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+article h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem; /* Adjust space below title */
+    text-align: left; /* Align titles to the left */
+}
+
+article p {
+    margin-top: 0.5rem; /* Space between title and content */
+}
+
+article a {
+    color: #333;
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
