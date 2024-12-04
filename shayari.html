@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KavyaRas - काव्यरस</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #fceabb, #f8b500);
+            color: #333;
+        }
+
+        header {
+            background: #6b4226;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        nav ul li a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        main {
+            flex: 1;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .poem {
+            background: #fff8e1;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .poem:hover {
+            transform: translateY(-5px);
+        }
+
+        .poem h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #6b4226;
+        }
+
+        .poem h2 a {
+            color: #e64a19;
+            text-decoration: none;
+        }
+
+        .poem h2 a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #6b4226;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 1rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.8rem;
+                padding: 1.5rem;
+            }
+
+            nav ul li a {
+                font-size: 1rem;
+            }
+
+            .poem h2 {
+                font-size: 1.5rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        काव्यरस
+        <nav>
+            <ul>
+                <li><a href="kavyaras.html">काव्यरस</a></li>
+                <li><a href="shayari.html">शेर</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="poem">
+            <h2><a href="poem1.html">आज मैं इतना बेचैन क्यों हूं</a></h2>
+        </div>
+        <div class="poem">
+            <h2><a href="poem2.html">हर चीज़ का अपना एक वक़्त होता है</a></h2>
+        </div>
+        <!-- Add more poems here -->
+    </main>
+    <footer>
+        © 2024 काव्यरस. <a href="#">संपर्क करें</a>
+    </footer>
+</body>
+</html>
