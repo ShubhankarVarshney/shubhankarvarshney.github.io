@@ -7,36 +7,43 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Merriweather', serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom, #fdfcfb, #e2d1c3);
+            color: #333;
         }
 
         header {
-            background: #333;
+            background: #4b2e83;
             color: white;
-            padding: 1rem;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
             display: flex;
             justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 1rem;
+            gap: 1.5rem;
         }
 
         nav ul li a {
-            color: white;
+            color: #ffd700;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #ffffff;
         }
 
         main {
@@ -45,29 +52,64 @@
         }
 
         .poem-content {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             max-width: 800px;
-            margin: 0 auto;
+            margin: 2rem auto;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .poem-content h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: #4b2e83;
+            text-align: center;
         }
 
         .poem-content p {
-            font-size: 1rem;
-            line-height: 1.5;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
         }
 
         footer {
-            background: #333;
+            background: #4b2e83;
             color: white;
             text-align: center;
             padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .poem-content h1 {
+                font-size: 2rem;
+            }
+
+            .poem-content p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -86,68 +128,50 @@
     <main>
         <div class="poem-content">
             <h1>आज मैं इतना बेचैन क्यों हूं</h1>
-            <p>आज मैं इतना बेचैन क्यों हूं
+            <p>
+                आज मैं इतना बेचैन क्यों हूं  
+                किसीकी याद में, किसी की ताक में  
+                इतना बेसब्र क्यों हूं  
 
-किसीकी याद में , किसी की ताक में
+                काश मुझे पाता होता -२  
+                तो मैं धीरज का पान करता  
+                शास्त्रों और आत्मज्ञान का पाठ करता  
+                किसी एक व्यक्ति से मिलने की इतनी जिज्ञासा क्यों  
 
-इतना बेसब्र क्यों हूं
+                जिस से एक नहीं हज़ार बार मिल चुके  
+                उस से मिलने की इतनी उत्सुकता क्यों  
 
-काश मुझे पाता होता -२
+                काश में समझ पाता कि मैं इतना बेचैन क्यों हूं  
+                आज अलबत्ता यू ही उस का खयाल आया  
+                शरीर तो स्वस्थ था लेकिन मन पसीच सा आया -२  
 
-तो मैं धीरज का पान करता
+                चाहा कि अभी उसे अपने पास पाऊँ  
+                तभी खयाल से मैं अपने जाग आया  
 
-शास्त्रों और आत्मज्ञान का पाठ करता
+                लेकिन तन्हा मैं तब भी था-२  
+                तभी तुम्हारी याद आयी  
+                दिल के कोने से एक सिसक निकली  
+                और आंखों के रास्ते वो बाहर आई  
+                अश्रु गिरे नैनं से -२  
 
-किसी एक व्यक्ति से मिलने की इतनी जिज्ञासा क्यों
+                सामने की चीज़ तो धुँधली  
+                लेकिन तुम्हारी तस्वीर और निखार आयी  
+                दिल तपोवन से जल उठा -२  
+                मन विचलित से हो उठा  
 
-जिस से एक नहीं हज़ार बार मिल चुके
+                वक्त का काटा रुक गया है  
+                ऐसा सा मुझे भान हुआ  
 
-उस से मिलने की इतनी उत्सुकता क्यों
+                घड़ी मिलान की कब आएगी  
+                कब यह इंतेज़ार की रुत ढल जाएगी  
 
-काश में समझ पाता कि मैं इतना बेचैन क्यों हूं
-
-आज अलबत्ता यू ही उस का खयाल आया
-
-शरीर तो स्वस्थ था लेकिन मन पसीच सा आया -२
-
-चाहा कि अभी उसे अपने पास पाऊँ
-
-तभी खयाल से मैं अपने जाग आया
-
-लेकिन तन्हा मैं तब भी था-२
-
-तभी तुम्हारी याद आयी
-
-दिल के कोने से एक सिसक निकली
-
-और आंखों के रास्ते वो बाहर आई
-
-अश्रु गिरे नैनं से -२
-
-सामने की चीज़ तो धुँधली
-
-लेकिन तुम्हारी तस्वीर और निखार आयी
-
-दिल तपोवन से जल उठा -२
-
-मन विचलित से हो उठा
-
-वक्त का काटा रुक गया है
-
-ऐसा सा मुझे भान हुआ
-
-घड़ी मिलान की कब आएगी
-
-कब यह इंतेज़ार की रुत ढल जाएगी
-
-अब मैं चैन तभी पाऊंगा
-
-जब तुम्हे अपने समक्ष प्रत्यक्ष पाऊंगा ।।
-</p>
+                अब मैं चैन तभी पाऊंगा  
+                जब तुम्हे अपने समक्ष प्रत्यक्ष पाऊंगा।।
+            </p>
         </div>
     </main>
     <footer>
-        <p>&copy; 2024 आपका नाम. सर्वाधिकार सुरक्षित.</p>
+        <p>&copy; 2024 आपका नाम. <a href="#">संपर्क करें</a></p>
     </footer>
 </body>
 </html>
