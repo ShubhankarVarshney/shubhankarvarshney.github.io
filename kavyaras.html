@@ -21,10 +21,10 @@
             background: #6b4226;
             color: white;
             text-align: center;
-            padding: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            font-size: 2rem;
+            padding: 2rem 1rem;
+            font-size: 2.5rem;
             font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -34,12 +34,14 @@
             display: flex;
             justify-content: center;
             gap: 1.5rem;
+            margin-top: 1rem;
         }
 
         nav ul li a {
             color: #ffd700;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.2rem;
         }
 
         nav ul li a:hover {
@@ -48,10 +50,10 @@
 
         main {
             flex: 1;
-            max-width: 800px;
+            max-width: 900px;
             margin: 2rem auto;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.85);
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -59,8 +61,8 @@
         .poem {
             background: #fff8e1;
             padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 1.5rem;
             transition: transform 0.2s ease-in-out;
         }
@@ -88,8 +90,9 @@
             background: #6b4226;
             color: white;
             text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
+            padding: 1.5rem 1rem;
+            font-size: 1rem;
+            margin-top: auto;
         }
 
         footer a {
@@ -103,36 +106,45 @@
 
         @media (max-width: 600px) {
             header {
+                font-size: 1.8rem;
+                padding: 1.5rem;
+            }
+
+            nav ul li a {
+                font-size: 1rem;
+            }
+
+            .poem h2 {
                 font-size: 1.5rem;
             }
 
             main {
                 padding: 1rem;
             }
-
-            .poem h2 {
-                font-size: 1.5rem;
-            }
         }
     </style>
 </head>
 <body>
     <header>
-        काव्यरस 
+        काव्यरस
+        <nav>
+            <ul>
+                <li><a href="kavyaras.html">काव्यरस</a></li>
+                <li><a href="shayari.html">शेर</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="poem">
             <h2><a href="poem1.html">आज मैं इतना बेचैन क्यों हूं</a></h2>
-            
         </div>
         <div class="poem">
             <h2><a href="poem2.html">हर चीज़ का अपना एक वक़्त होता है</a></h2>
-            
         </div>
         <!-- Add more poems here -->
     </main>
     <footer>
-        © 2024 काव्यरस.
+        © 2024 काव्यरस. <a href="#">संपर्क करें</a>
     </footer>
 </body>
 </html>
