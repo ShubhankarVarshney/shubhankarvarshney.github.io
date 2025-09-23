@@ -41,13 +41,15 @@
   </header>
 
   <main class="wrap">
-    <h1><span class="hi">काव्यरस</span></h1>
+    <h1 class="hi">काव्यरस</h1>
     <p class="hi" style="margin:0 0 6px;">शीर्षक पर क्लिक करके पूरी कविता पढ़ें।</p>
 
     <div class="controls">
       <label class="search" aria-label="Search poems">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <input id="q" type="search" placeholder="Search title or keywords… / शीर्षक/शब्द खोजें">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" role="img" focusable="false">
+          <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input id="q" type="search" placeholder="Search title or keywords… / शीर्षक/शब्द खोजें" aria-label="Search">
       </label>
 
       <select id="sort" class="sort" aria-label="Sort posts">
@@ -75,7 +77,7 @@
         <div class="meta">नज़्म • <time datetime="2017-07-10">2017</time></div>
       </article>
 
-      <article data-title="और मैं" data-tags="मैं" data-date="2024-07-10">
+      <article data-title="और मैं" data-tags="मैं" data-date="2025-07-10">
         <h2 class="hi"><a href="/poem3.html">और मैं</a></h2>
         <div class="meta">ग़ज़ल • <time datetime="2025-07-10">2025</time></div>
       </article>
@@ -83,7 +85,7 @@
     </section>
 
     <footer class="wrap" style="padding:16px 0;">
-      <p>© <span id="y"></span> KavyaRas • </p>
+      <p>© <span id="y"></span> KavyaRas</p>
     </footer>
   </main>
 
@@ -94,41 +96,32 @@
     // Normalize helper (works for Latin/Devanagari searches)
     const normalize = s => (s||'').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');
 
-    // Search
+    // Elements
     const q = document.getElementById('q');
     const postList = document.getElementById('post-list');
     let posts = Array.from(postList.querySelectorAll('article'));
 
+    // Search
     function applyFilter() {
       const term = normalize(q.value);
-      posts.forEach(a=>{
-        const hay = normalize(a.dataset.title + ' ' + (a.dataset.tags||''));
+      posts.forEach(a => {
+        const hay = normalize((a.dataset.title||'') + ' ' + (a.dataset.tags||''));
         a.style.display = hay.includes(term) ? '' : 'none';
       });
     }
     q.addEventListener('input', applyFilter);
 
-    // Sorting (date/title)
+    // Sorting (by data-date)
     const select = document.getElementById('sort');
     function sortPosts() {
       const val = select.value;
-      const byDate = (a,b) => {
-        const da = new Date(a.dataset.date);
-        const db = new Date(b.dataset.date);
-        return da - db;
-      };
-      const byTitle = (a,b) => a.dataset.title.localeCompare(b.dataset.title, undefined, {sensitivity:'base'});
-
+      const byDateAsc = (a,b) => new Date(a.dataset.date) - new Date(b.dataset.date);
       let arr = posts.slice();
-      if (val === 'date-desc') arr.sort((a,b)=> byDate(b,a));
-      else if (val === 'date-asc') arr.sort(byDate);
-      else if (val === 'title-asc') arr.sort(byTitle);
-      else if (val === 'title-desc') arr.sort((a,b)=> byTitle(b,a));
-
-      // re-append in new order
+      if (val === 'date-desc') arr.sort((a,b) => byDateAsc(b,a));
+      else arr.sort(byDateAsc);
       arr.forEach(a => postList.appendChild(a));
     }
-    select.addEventListener('change', ()=>{ sortPosts(); applyFilter(); });
+    select.addEventListener('change', () => { sortPosts(); applyFilter(); });
 
     // Initial sort (newest first) + filter
     sortPosts();
