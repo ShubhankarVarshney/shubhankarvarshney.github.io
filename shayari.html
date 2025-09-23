@@ -3,136 +3,109 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Shayari / Quotes — शेर / कथन</title>
-  <meta name="description" content="Short one-liners, shayari, and quotes by Shubhankar Varshney">
+  <title>शेर / Shayari</title>
+  <meta name="description" content="Shubhankar Varshney — Shayari / Sher list">
   <style>
     :root{
-      --bg:#ffffff; --fg:#111111; --muted:#555; --rule:#e5e7eb; --link:#1a0dab;
-      --card:#fafafa; --btn:#f3f4f6; --btnb:#d1d5db;
-      --max:860px;
+      --bg:#ffffff; --fg:#111111; --muted:#666; --rule:#e5e7eb; --link:#1a0dab;
+      --card:#fafafa; --btn:#f4f4f5; --btnb:#d1d5db;
+      --max: 900px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;background:var(--bg);color:var(--fg);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans Devanagari",sans-serif;line-height:1.6}
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans Devanagari",sans-serif;line-height:1.7}
     a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
-    header{border-bottom:1px solid var(--rule);background:var(--bg);position:sticky;top:0;z-index:10}
+    header{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0;z-index:10}
     .wrap{max-width:var(--max);margin:0 auto;padding:16px}
     .brand a{font-weight:600;font-size:20px;color:var(--fg)}
-    h1{font-size:28px;margin:16px 0 6px}
+    h1{font-size:28px;margin:18px 0 6px}
     .hi{font-family:"Noto Sans Devanagari",system-ui,sans-serif}
-    .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 14px}
-    .search{flex:1 1 280px;display:flex;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:8px;padding:8px 10px;background:#fff}
+    .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px}
+    .search{flex:1 1 320px;display:flex;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;background:#fff}
     .search input{border:0;outline:0;background:transparent;width:100%}
-    .sort,.tag{border:1px solid var(--rule);border-radius:8px;padding:8px 10px;background:#fff}
-    .grid{display:grid;grid-template-columns:1fr;gap:12px}
-    article.quote{border:1px solid var(--rule);border-radius:12px;background:var(--card);padding:14px}
-    blockquote{margin:0 0 8px 0;font-size:18px}
-    .author{font-size:14px;color:var(--muted)}
-    .meta{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:8px}
-    .left{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:13px}
-    .actions{display:flex;gap:8px}
-    button.copy{appearance:none;border:1px solid var(--btnb);background:var(--btn);border-radius:8px;padding:6px 10px;cursor:pointer}
+    .tag{border:1px solid var(--rule);border-radius:8px;padding:10px 12px;background:#fff}
+    .list{display:block;margin:0;padding:0}
+    article.sher{list-style:none;border-bottom:1px solid var(--rule);padding:14px 0}
+    article.sher:last-child{border-bottom:0}
+    .couplet{margin:0;font-size:19px}
+    .couplet br{content:""; display:block; margin-top:6px}
+    .actions{display:flex;gap:8px;margin-top:10px}
+    button.copy{appearance:none;border:1px solid var(--btnb);background:var(--btn);
+      border-radius:8px;padding:6px 10px;cursor:pointer;font-size:14px}
     button.copy:active{transform:translateY(1px)}
+    .more{display:flex;justify-content:center;margin:18px 0}
+    #loadMore{appearance:none;border:1px solid var(--btnb);background:#fff;padding:10px 14px;border-radius:10px;cursor:pointer}
+    #loadMore:disabled{opacity:.5;cursor:not-allowed}
     footer{border-top:1px solid var(--rule);margin-top:20px}
-    @media (min-width:760px){ h1{font-size:32px} .grid{grid-template-columns:1fr 1fr} }
+    @media (min-width:760px){ h1{font-size:32px} .couplet{font-size:20px} }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <!-- Only homepage link via your name (consistent with your preference) -->
+      <!-- Only homepage link via your name, per your preference -->
       <div class="brand"><a href="/index.html">Shubhankar Varshney</a></div>
     </div>
   </header>
 
   <main class="wrap">
-    <h1 class="hi">शेर / इक़्तिबास</h1>
-    <p class="hi" style="margin:0 0 6px;">यहाँ मेरे एक-पंक्ति वाले शेर/कथन। नीचे अपने अनुसार जोड़ें या खोजें।</p>
+    <h1 class="hi">शेर</h1>
+    <p class="hi" style="margin:0 0 8px;">दो मिसरों में बात—बस शेर। नीचे खोजें, टैग से छाँटें, या कॉपी करें।</p>
 
     <div class="controls">
-      <label class="search" aria-label="Search quotes">
+      <label class="search" aria-label="Search">
         <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" role="img">
           <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
-        <input id="q" type="search" placeholder="Search text / author / tags… / पाठ/लेखक/टैग खोजें">
+        <input id="q" type="search" placeholder="मिसरा/शब्द/टैग खोजें…">
       </label>
 
       <select id="tag" class="tag" aria-label="Filter by tag">
-        <option value="">All tags</option>
-        <!-- JS will auto-populate other tags it finds -->
-      </select>
-
-      <select id="sort" class="sort" aria-label="Sort quotes">
-        <option value="date-desc">Newest first</option>
-        <option value="date-asc">Oldest first</option>
+        <option value="">सभी टैग</option>
+        <!-- JS will auto-populate tags -->
       </select>
     </div>
 
-    <!-- HOW TO ADD A NEW ONE-LINER / QUOTE
-      1) Duplicate an <article class="quote"> block.
-      2) Edit the blockquote text.
-      3) (Optional) Edit data-author, data-tags (comma-separated), and data-date (YYYY-MM-DD).
-      4) Update the <time> display text if you want a human-friendly format.
+    <!--
+      HOW TO ADD A SHER:
+      - Duplicate an <article class="sher"> block.
+      - Put your two lines inside <p class="couplet hi"> …<br>… </p>
+      - Optionally set data-tags as a comma-separated list (used for filtering).
+      - NO author, NO date by design.
     -->
-    <section id="list" class="grid">
+    <section id="list" class="list">
 
-      <article id="q-1" class="quote"
-        data-author="—"
-        data-tags="विचार,जीवन"
-        data-date="2025-07-15">
-        <blockquote class="hi"> हमें वहम था कि बाग अपना है
-                                तूफान के बाद पता चला कि सूखे पत्तों पर भी हक़ हवाओं का है</blockquote>
-        <div class="author hi">— अनाम</div>
-        <div class="meta">
-          <div class="left">
-            <span title="Tags" class="hi">विचार • जीवन</span>
-            <time datetime="2025-07-15">15 Jul 2025</time>
-          </div>
-          <div class="actions">
-            <button class="copy" data-target="q-1">Copy</button>
-          </div>
+      <article id="s-1" class="sher" data-tags="विचार,ख़ामोशी">
+        <p class="couplet hi">हमें वहम था कि बाग अपना है 
+<br>तूफान के बाद पता चला कि सूखे पत्तों पर भी हक़ हवाओं का है</p>
+        <div class="actions">
+          <button class="copy" data-target="s-1">कॉपी</button>
         </div>
       </article>
 
-      <article id="q-2" class="quote"
-        data-author="—"
-        data-tags="प्रेम"
-        data-date="2025-06-20">
-        <blockquote class="hi"> मेरे तलब के तकाज़े पे थोड़ा गौर तो कर
-                                मैं तेरे पास आया हूं खुदा के होते हुए</blockquote>
-        <div class="author hi">— अनाम</div>
-        <div class="meta">
-          <div class="left">
-            <span class="hi">प्रेम</span>
-          </div>
-          <div class="actions">
-            <button class="copy" data-target="q-2">Copy</button>
-          </div>
+      <article id="s-2" class="sher" data-tags="ख़्वाब,उम्मीद">
+        <p class="couplet hi">मेरे तलब के तकाज़े पे थोड़ा गौर तो कर मैं तेरे पास आया हूं खुदा के होते हुए</p>
+        <div class="actions">
+          <button class="copy" data-target="s-2">कॉपी</button>
         </div>
       </article>
 
-      <article id="q-3" class="quote"
-        data-author="—"
-        data-tags="धैर्य,समय"
-        data-date="2024-12-01">
-        <blockquote class="hi">हानि लाभ जीवन मरण यश अपयश विधी हाथ</blockquote>
-        <div class="author hi">— अनाम</div>
-        <div class="meta">
-          <div class="left">
-            <span class="hi">धैर्य • समय</span>
-          </div>
-          <div class="actions">
-            <button class="copy" data-target="q-3">Copy</button>
-          </div>
+      <article id="s-3" class="sher" data-tags="धैर्य,समय">
+        <p class="couplet hi">हानि लाभ जीवन मरण यश अपयश विधी हाथ</p>
+        <div class="actions">
+          <button class="copy" data-target="s-3">कॉपी</button>
         </div>
       </article>
 
-      <!-- Add more <article class="quote"> blocks above this line -->
-
+      <!-- Add more shers above this line -->
     </section>
 
+    <div class="more">
+      <button id="loadMore">और दिखाएँ</button>
+    </div>
+
     <footer class="wrap" style="padding:16px 0;">
-      <p>© <span id="y"></span> Shayari / Quotes</p>
+      <p>© <span id="y"></span> Shayari</p>
     </footer>
   </main>
 
@@ -140,17 +113,15 @@
     // Year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Helpers
-    const norm = s => (s||'').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'').trim();
+    // Elements & helpers
     const list = document.getElementById('list');
-    let items = Array.from(list.querySelectorAll('article.quote'));
+    let items = Array.from(list.querySelectorAll('article.sher'));
+    const norm = s => (s||'').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'').trim();
 
-    // Build tag dropdown from data-tags
+    // Build tags dropdown
     const tagSel = document.getElementById('tag');
     const tagSet = new Set();
-    items.forEach(a=>{
-      (a.dataset.tags||'').split(',').map(t=>t.trim()).filter(Boolean).forEach(t=>tagSet.add(t));
-    });
+    items.forEach(a => (a.dataset.tags||'').split(',').map(t=>t.trim()).filter(Boolean).forEach(t=>tagSet.add(t)));
     Array.from(tagSet).sort((a,b)=>a.localeCompare(b,'hi')).forEach(t=>{
       const opt=document.createElement('option'); opt.value=t; opt.textContent=t; tagSel.appendChild(opt);
     });
@@ -160,44 +131,68 @@
     function applyFilter(){
       const term = norm(q.value);
       const tag = tagSel.value;
+      let shown = 0;
       items.forEach(a=>{
-        const text = norm(a.querySelector('blockquote')?.textContent) + ' ' +
-                     norm(a.dataset.author) + ' ' + norm(a.dataset.tags);
+        const text = norm(a.querySelector('.couplet')?.textContent) + ' ' + norm(a.dataset.tags);
         const tagOK = !tag || (a.dataset.tags||'').split(',').map(s=>s.trim()).includes(tag);
-        a.style.display = (text.includes(term) && tagOK) ? '' : 'none';
+        const show = text.includes(term) && tagOK;
+        a.style.display = show ? '' : 'none';
+        if(show) shown++;
       });
+      // If user filters, make sure Load More doesn't hide matching results
+      if(term || tag){ document.getElementById('loadMore').disabled = true; }
+      else { document.getElementById('loadMore').disabled = (visibleCount() >= items.length); }
     }
     q.addEventListener('input', applyFilter);
     tagSel.addEventListener('change', applyFilter);
 
-    // Sort by date
-    const sortSel = document.getElementById('sort');
-    function sortItems(){
-      const val = sortSel.value;
-      const byDateAsc = (a,b)=> new Date(a.dataset.date) - new Date(b.dataset.date);
-      const arr = items.slice();
-      arr.sort(val==='date-desc' ? (a,b)=>byDateAsc(b,a) : byDateAsc);
-      arr.forEach(a=>list.appendChild(a));
+    // Client-side pagination (like Rekhta list pages feeling)
+    const PAGE = 10; // how many to show initially / per click
+    let shown = 0;
+    function visibleCount(){
+      return items.filter(a => a.style.display !== 'none').length;
     }
-    sortSel.addEventListener('change', ()=>{ sortItems(); applyFilter(); });
+    function showNext(batch = PAGE){
+      const term = norm(q.value);
+      const tag = tagSel.value;
+      let count = 0;
+      for(let i=0;i<items.length;i++){
+        const a = items[i];
+        const hiddenByFilter = a.style.display === 'none' && (term || tag);
+        if(hiddenByFilter) continue; // filtered out
+        if(a.dataset._visible === '1') continue; // already shown during pagination
+        a.dataset._visible = '1';
+        a.style.removeProperty('display');
+        count++;
+        if(count >= batch) break;
+      }
+      // Disable when done
+      const btn = document.getElementById('loadMore');
+      const remaining = items.filter(a => a.dataset._visible !== '1').length;
+      btn.disabled = remaining === 0;
+    }
+    // Initialize: hide all, then show first PAGE
+    function initPaging(){
+      items.forEach(a=>{ a.dataset._visible = '0'; a.style.display='none'; });
+      showNext(PAGE);
+    }
+    document.getElementById('loadMore').addEventListener('click', ()=> showNext(PAGE));
 
-    // Copy buttons
+    // Copy handler
     list.addEventListener('click', (e)=>{
       const btn = e.target.closest('button.copy');
       if(!btn) return;
       const id = btn.dataset.target;
       const el = document.getElementById(id);
-      const quote = el.querySelector('blockquote')?.textContent?.trim() || '';
-      const author = (el.querySelector('.author')?.textContent || '').trim();
-      const text = author ? `${quote}\n${author}` : quote;
+      const text = (el.querySelector('.couplet')?.textContent || '').trim();
       navigator.clipboard.writeText(text).then(()=>{
-        const old = btn.textContent; btn.textContent='Copied!';
+        const old = btn.textContent; btn.textContent='कॉपी हो गया';
         setTimeout(()=>btn.textContent=old,1000);
       });
     });
 
-    // Initial
-    sortItems();
+    // On load
+    initPaging();
     applyFilter();
   </script>
 </body>
