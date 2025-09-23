@@ -1,150 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KavyaRas - काव्यरस</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Merriweather', serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: linear-gradient(to bottom, #fceabb, #f8b500);
-            color: #333;
-        }
-
-        header {
-            background: #6b4226;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            font-size: 2.5rem;
-            font-weight: bold;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        nav ul li a {
-            color: #ffd700;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        nav ul li a:hover {
-            color: #fff;
-        }
-
-        main {
-            flex: 1;
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .poem {
-            background: #fff8e1;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .poem:hover {
-            transform: translateY(-5px);
-        }
-
-        .poem h2 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            color: #6b4226;
-        }
-
-        .poem h2 a {
-            color: #e64a19;
-            text-decoration: none;
-        }
-
-        .poem h2 a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background: #6b4226;
-            color: white;
-            text-align: center;
-            padding: 1.5rem 1rem;
-            font-size: 1rem;
-            margin-top: auto;
-        }
-
-        footer a {
-            color: #ffd700;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                font-size: 1.8rem;
-                padding: 1.5rem;
-            }
-
-            nav ul li a {
-                font-size: 1rem;
-            }
-
-            .poem h2 {
-                font-size: 1.5rem;
-            }
-
-            main {
-                padding: 1rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shayari / Quotes — शेर / कथन</title>
+  <meta name="description" content="Short one-liners, shayari, and quotes by Shubhankar Varshney">
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#111111; --muted:#555; --rule:#e5e7eb; --link:#1a0dab;
+      --card:#fafafa; --btn:#f3f4f6; --btnb:#d1d5db;
+      --max:860px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--fg);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans Devanagari",sans-serif;line-height:1.6}
+    a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+    header{border-bottom:1px solid var(--rule);background:var(--bg);position:sticky;top:0;z-index:10}
+    .wrap{max-width:var(--max);margin:0 auto;padding:16px}
+    .brand a{font-weight:600;font-size:20px;color:var(--fg)}
+    h1{font-size:28px;margin:16px 0 6px}
+    .hi{font-family:"Noto Sans Devanagari",system-ui,sans-serif}
+    .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 14px}
+    .search{flex:1 1 280px;display:flex;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:8px;padding:8px 10px;background:#fff}
+    .search input{border:0;outline:0;background:transparent;width:100%}
+    .sort,.tag{border:1px solid var(--rule);border-radius:8px;padding:8px 10px;background:#fff}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    article.quote{border:1px solid var(--rule);border-radius:12px;background:var(--card);padding:14px}
+    blockquote{margin:0 0 8px 0;font-size:18px}
+    .author{font-size:14px;color:var(--muted)}
+    .meta{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:8px}
+    .left{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:13px}
+    .actions{display:flex;gap:8px}
+    button.copy{appearance:none;border:1px solid var(--btnb);background:var(--btn);border-radius:8px;padding:6px 10px;cursor:pointer}
+    button.copy:active{transform:translateY(1px)}
+    footer{border-top:1px solid var(--rule);margin-top:20px}
+    @media (min-width:760px){ h1{font-size:32px} .grid{grid-template-columns:1fr 1fr} }
+  </style>
 </head>
 <body>
-    <header>
-        काव्यरस
-        <nav>
-            <ul>
-                <li><a href="kavyaras.html">काव्यरस</a></li>
-                <li><a href="shayari.html">शेर</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="poem">
-            <h2><a href="poem1.html">आज मैं इतना बेचैन क्यों हूं</a></h2>
+  <header>
+    <div class="wrap">
+      <!-- Only homepage link via your name (consistent with your preference) -->
+      <div class="brand"><a href="/index.html">Shubhankar Varshney</a></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="hi">शेर / इक़्तिबास</h1>
+    <p class="hi" style="margin:0 0 6px;">यहाँ मेरे एक-पंक्ति वाले शेर/कथन। नीचे अपने अनुसार जोड़ें या खोजें।</p>
+
+    <div class="controls">
+      <label class="search" aria-label="Search quotes">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" role="img">
+          <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input id="q" type="search" placeholder="Search text / author / tags… / पाठ/लेखक/टैग खोजें">
+      </label>
+
+      <select id="tag" class="tag" aria-label="Filter by tag">
+        <option value="">All tags</option>
+        <!-- JS will auto-populate other tags it finds -->
+      </select>
+
+      <select id="sort" class="sort" aria-label="Sort quotes">
+        <option value="date-desc">Newest first</option>
+        <option value="date-asc">Oldest first</option>
+      </select>
+    </div>
+
+    <!-- HOW TO ADD A NEW ONE-LINER / QUOTE
+      1) Duplicate an <article class="quote"> block.
+      2) Edit the blockquote text.
+      3) (Optional) Edit data-author, data-tags (comma-separated), and data-date (YYYY-MM-DD).
+      4) Update the <time> display text if you want a human-friendly format.
+    -->
+    <section id="list" class="grid">
+
+      <article id="q-1" class="quote"
+        data-author="—"
+        data-tags="विचार,जीवन"
+        data-date="2025-07-15">
+        <blockquote class="hi"> हमें वहम था कि बाग अपना है
+                                तूफान के बाद पता चला कि सूखे पत्तों पर भी हक़ हवाओं का है</blockquote>
+        <div class="author hi">— अनाम</div>
+        <div class="meta">
+          <div class="left">
+            <span title="Tags" class="hi">विचार • जीवन</span>
+            <time datetime="2025-07-15">15 Jul 2025</time>
+          </div>
+          <div class="actions">
+            <button class="copy" data-target="q-1">Copy</button>
+          </div>
         </div>
-        <div class="poem">
-            <h2><a href="poem2.html">हर चीज़ का अपना एक वक़्त होता है</a></h2>
+      </article>
+
+      <article id="q-2" class="quote"
+        data-author="—"
+        data-tags="प्रेम"
+        data-date="2025-06-20">
+        <blockquote class="hi"> मेरे तलब के तकाज़े पे थोड़ा गौर तो कर
+                                मैं तेरे पास आया हूं खुदा के होते हुए</blockquote>
+        <div class="author hi">— अनाम</div>
+        <div class="meta">
+          <div class="left">
+            <span class="hi">प्रेम</span>
+          </div>
+          <div class="actions">
+            <button class="copy" data-target="q-2">Copy</button>
+          </div>
         </div>
-        <!-- Add more poems here -->
-    </main>
-    <footer>
-        © 2024 काव्यरस. <a href="#">संपर्क करें</a>
+      </article>
+
+      <article id="q-3" class="quote"
+        data-author="—"
+        data-tags="धैर्य,समय"
+        data-date="2024-12-01">
+        <blockquote class="hi">हानि लाभ जीवन मरण यश अपयश विधी हाथ</blockquote>
+        <div class="author hi">— अनाम</div>
+        <div class="meta">
+          <div class="left">
+            <span class="hi">धैर्य • समय</span>
+          </div>
+          <div class="actions">
+            <button class="copy" data-target="q-3">Copy</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Add more <article class="quote"> blocks above this line -->
+
+    </section>
+
+    <footer class="wrap" style="padding:16px 0;">
+      <p>© <span id="y"></span> Shayari / Quotes</p>
     </footer>
+  </main>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Helpers
+    const norm = s => (s||'').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'').trim();
+    const list = document.getElementById('list');
+    let items = Array.from(list.querySelectorAll('article.quote'));
+
+    // Build tag dropdown from data-tags
+    const tagSel = document.getElementById('tag');
+    const tagSet = new Set();
+    items.forEach(a=>{
+      (a.dataset.tags||'').split(',').map(t=>t.trim()).filter(Boolean).forEach(t=>tagSet.add(t));
+    });
+    Array.from(tagSet).sort((a,b)=>a.localeCompare(b,'hi')).forEach(t=>{
+      const opt=document.createElement('option'); opt.value=t; opt.textContent=t; tagSel.appendChild(opt);
+    });
+
+    // Search + Tag filter
+    const q = document.getElementById('q');
+    function applyFilter(){
+      const term = norm(q.value);
+      const tag = tagSel.value;
+      items.forEach(a=>{
+        const text = norm(a.querySelector('blockquote')?.textContent) + ' ' +
+                     norm(a.dataset.author) + ' ' + norm(a.dataset.tags);
+        const tagOK = !tag || (a.dataset.tags||'').split(',').map(s=>s.trim()).includes(tag);
+        a.style.display = (text.includes(term) && tagOK) ? '' : 'none';
+      });
+    }
+    q.addEventListener('input', applyFilter);
+    tagSel.addEventListener('change', applyFilter);
+
+    // Sort by date
+    const sortSel = document.getElementById('sort');
+    function sortItems(){
+      const val = sortSel.value;
+      const byDateAsc = (a,b)=> new Date(a.dataset.date) - new Date(b.dataset.date);
+      const arr = items.slice();
+      arr.sort(val==='date-desc' ? (a,b)=>byDateAsc(b,a) : byDateAsc);
+      arr.forEach(a=>list.appendChild(a));
+    }
+    sortSel.addEventListener('change', ()=>{ sortItems(); applyFilter(); });
+
+    // Copy buttons
+    list.addEventListener('click', (e)=>{
+      const btn = e.target.closest('button.copy');
+      if(!btn) return;
+      const id = btn.dataset.target;
+      const el = document.getElementById(id);
+      const quote = el.querySelector('blockquote')?.textContent?.trim() || '';
+      const author = (el.querySelector('.author')?.textContent || '').trim();
+      const text = author ? `${quote}\n${author}` : quote;
+      navigator.clipboard.writeText(text).then(()=>{
+        const old = btn.textContent; btn.textContent='Copied!';
+        setTimeout(()=>btn.textContent=old,1000);
+      });
+    });
+
+    // Initial
+    sortItems();
+    applyFilter();
+  </script>
 </body>
 </html>
