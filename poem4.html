@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पहली कविता का शीर्षक</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #fdfcfb, #e2d1c3);
+            color: #333;
+        }
+
+        header {
+            background: #4b2e83;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #ffffff;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .poem-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 2rem auto;
+            animation: fadeIn 1.5s ease-in-out;
+            white-space: pre-line; /* Preserves line breaks in text */
+        }
+
+        .poem-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4b2e83;
+            text-align: center;
+        }
+
+        .poem-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        footer {
+            background: #4b2e83;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .poem-content h1 {
+                font-size: 2rem;
+            }
+
+            .poem-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="kavyaras.html">काव्यरस</a></li>
+                <li><a href="shayari.html">शेर</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="poem-content">
+            <h1>दीवाने कैसे होते हैं</h1>
+            <p>
+                दीवाने कैसे होते हैं
+                जनाब इधर देखिए ऐसे होते हैं
+
+                मुख पे रहती है मुस्कान पूरे दिन
+                उनसे मिलने के जब आसार होते हैं
+
+                हर रोज़ जाते हैं उम्मीद में मिलने उनसे
+                ना मिलने के चाहे जितने बहाने होते हैं
+
+                सोचते हैं उनके बारे में
+                करने को चाहे जितने काम होते हैं
+
+                देखना ज़रूरी है उनका चेहरा हर रोज़ 
+                अधूरी तलब के शारीरिक नुकसान होते हैं
+
+                अब क्या रहा मेरे बस में 
+                जो वो कहें वोही काम होते हैं
+
+                दोष तो लौ का है जो इतनी प्रगाढ़ है
+                परवाने फालतू में बदनाम होते हैं
+
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 आपका नाम. <a href="#">संपर्क करें</a></p>
+    </footer>
+</body>
+</html>
