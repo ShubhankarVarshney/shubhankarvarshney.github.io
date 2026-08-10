@@ -2,133 +2,170 @@
 <html lang="hi">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>KavyaRas — काव्यरस</title>
-  <meta name="description" content="Shubhankar Varshney — KavyaRas (poems)">
-  <style>
-    :root{
-      --bg:#ffffff; --fg:#111111; --muted:#555555; --rule:#e5e7eb; --link:#1a0dab;
-      --max: 860px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans Devanagari",sans-serif;line-height:1.6}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header{border-bottom:1px solid var(--rule);background:var(--bg);position:sticky;top:0;z-index:10}
-    .wrap{max-width:var(--max);margin:0 auto;padding:16px}
-    .brand a{font-weight:600;font-size:20px;color:var(--fg)}
-    main h1{font-size:28px;margin:16px 0 6px}
-    .hi{font-family:"Noto Sans Devanagari",system-ui,sans-serif}
-    .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 14px}
-    .search{flex:1 1 260px;display:flex;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:8px;padding:8px 10px}
-    .search input{border:0;outline:0;background:transparent;width:100%}
-    .sort{border:1px solid var(--rule);border-radius:8px;padding:8px 10px;background:transparent}
-    .posts{display:block;margin:0;padding:0}
-    article{list-style:none;padding:14px 0;border-bottom:1px solid var(--rule)}
-    article:last-child{border-bottom:0}
-    article h2{font-size:19px;margin:0 0 4px}
-    .meta{font-size:13px;color:var(--muted)}
-    footer{border-top:1px solid var(--rule);margin-top:20px}
-    @media (min-width:760px){ main h1{font-size:32px} }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KavyaRas — काव्यरस — Shubhankar Varshney</title>
+  <meta name="description" content="Shubhankar Varshney — KavyaRas: a collection of nazms, ghazals and kavitas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <!-- Only link back to homepage via your name, as requested -->
-      <div class="brand"><a href="/index.html">Shubhankar Varshney</a></div>
-    </div>
-  </header>
+  <div class="site-wrapper">
 
-  <main class="wrap">
-    <h1 class="hi">काव्यरस</h1>
-    <p class="hi" style="margin:0 0 6px;">शीर्षक पर क्लिक करके पूरी कविता पढ़ें।</p>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__header">
+        <a href="index.html" class="sidebar__name">Shubhankar Varshney</a>
+        <div class="sidebar__tagline">PhD · Computer Science</div>
+      </div>
+      <nav class="sidebar__nav">
+        <ul>
+          <li><a href="index.html">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Home
+          </a></li>
+          <li><a href="Shubhankar_Varshney_CV.pdf">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            CV
+          </a></li>
+          <li><a href="hobbies.html">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            Hobbies
+          </a></li>
+          <li><a href="kavyaras.html" class="active">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            KavyaRas
+          </a></li>
+          <li><a href="shayari.html">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Shayari
+          </a></li>
+        </ul>
+      </nav>
+      <div class="sidebar__footer">
+        <div class="sidebar__contact">
+          <a href="mailto:svarshn@purdue.edu" class="sidebar__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            svarshn@purdue.edu
+          </a>
+        </div>
+      </div>
+    </aside>
 
-    <div class="controls">
-      <label class="search" aria-label="Search poems">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" role="img" focusable="false">
-          <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <input id="q" type="search" placeholder="Search title or keywords… / शीर्षक/शब्द खोजें" aria-label="Search">
-      </label>
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-      <select id="sort" class="sort" aria-label="Sort posts">
-        <option value="date-desc">Newest first</option>
-        <option value="date-asc">Oldest first</option>
-      </select>
-    </div>
+    <!-- Main -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="hi">काव्यरस</h1>
+        <p class="hero-subtitle hi">शीर्षक पर क्लिक करके पूरी कविता पढ़ें।</p>
+        <div class="hero-accent-line"></div>
+      </div>
 
-    <!--
-      HOW TO CHANGE A POEM'S DATE:
-      1) Update data-date (ISO: YYYY-MM-DD) on the <article>
-      2) Update the <time> text for display (any format you like)
-      The list auto-sorts by data-date on load and when you change the sorter.
-    -->
-    <section id="post-list" class="posts">
-      <!-- Example: update href to your poem page, title text, and data-date -->
-      <article data-title="आज मैं इतना बेचैन क्यों हूं" data-tags="विरह याद बेचैनी" data-date="2024-03-05">
-        <h2 class="hi"><a href="/poem1.html">आज मैं इतना बेचैन क्यों हूं</a></h2>
-        <div class="meta">नज़्म • <time datetime="2017-03-05">2017</time></div>
-      </article>
+      <div class="content-area">
 
-      <!-- Another example (create poem2.html when ready) -->
-      <article data-title="हर चीज़ का अपना एक वक़्त होता है" data-tags="समय धैर्य" data-date="2024-07-10">
-        <h2 class="hi"><a href="/poem2.html">हर चीज़ का अपना एक वक़्त होता है</a></h2>
-        <div class="meta">नज़्म • <time datetime="2017-07-10">2017</time></div>
-      </article>
+        <div class="controls fade-in">
+          <label class="search-box" aria-label="Search poems">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input id="q" type="search" placeholder="Search title or keywords… / शीर्षक/शब्द खोजें" aria-label="Search">
+          </label>
 
-      <article data-title="और मैं" data-tags="मैं" data-date="2025-07-10">
-        <h2 class="hi"><a href="/poem3.html">और मैं</a></h2>
-        <div class="meta">ग़ज़ल • <time datetime="2025-07-10">2025</time></div>
-      </article>
+          <select id="sort" class="sort-select" aria-label="Sort posts">
+            <option value="date-desc">Newest first</option>
+            <option value="date-asc">Oldest first</option>
+          </select>
+        </div>
 
-      <article data-title="दीवाने कैसे होते हैं" data-tags="मैं" data-date="2025-07-10">
-        <h2 class="hi"><a href="/poem4.html">दीवाने कैसे होते हैं</a></h2>
-        <div class="meta">ग़ज़ल • <time datetime="2025-07-10">2025</time></div>
-      </article>
-      <!-- Add more <article> blocks above this line -->
-    </section>
+        <section id="post-list" class="fade-in-delayed">
+          <a href="poem1.html" class="poem-card" data-title="आज मैं इतना बेचैन क्यों हूं" data-tags="विरह याद बेचैनी" data-date="2024-03-05">
+            <h2 class="hi">आज मैं इतना बेचैन क्यों हूं</h2>
+            <div class="meta">नज़्म • <time datetime="2017-03-05">2017</time></div>
+          </a>
 
-    <footer class="wrap" style="padding:16px 0;">
-      <p>© <span id="y"></span> KavyaRas</p>
-    </footer>
-  </main>
+          <a href="poem2.html" class="poem-card" data-title="हर चीज़ का अपना एक वक़्त होता है" data-tags="समय धैर्य" data-date="2024-07-10">
+            <h2 class="hi">हर चीज़ का अपना एक वक़्त होता है</h2>
+            <div class="meta">नज़्म • <time datetime="2017-07-10">2017</time></div>
+          </a>
+
+          <a href="poem3.html" class="poem-card" data-title="और मैं" data-tags="मैं" data-date="2025-07-10">
+            <h2 class="hi">और मैं</h2>
+            <div class="meta">ग़ज़ल • <time datetime="2025-07-10">2025</time></div>
+          </a>
+
+          <a href="poem4.html" class="poem-card" data-title="दीवाने कैसे होते हैं" data-tags="मैं" data-date="2025-07-10">
+            <h2 class="hi">दीवाने कैसे होते हैं</h2>
+            <div class="meta">ग़ज़ल • <time datetime="2025-07-10">2025</time></div>
+          </a>
+        </section>
+
+      </div>
+
+      <footer class="site-footer">
+        <p>© <span id="year"></span> KavyaRas — Shubhankar Varshney</p>
+      </footer>
+    </main>
+
+  </div>
 
   <script>
     // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Normalize helper (works for Latin/Devanagari searches)
-    const normalize = s => (s||'').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');
+    // Mobile sidebar
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    hamburger.addEventListener('click', () => {
+      const open = sidebar.classList.toggle('is-open');
+      hamburger.classList.toggle('is-active');
+      overlay.style.display = open ? 'block' : 'none';
+      requestAnimationFrame(() => overlay.classList.toggle('is-visible', open));
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('is-open');
+      hamburger.classList.remove('is-active');
+      overlay.classList.remove('is-visible');
+      setTimeout(() => overlay.style.display = 'none', 300);
+    });
+
+    // Normalize helper
+    const normalize = s => (s || '').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
 
     // Elements
     const q = document.getElementById('q');
     const postList = document.getElementById('post-list');
-    let posts = Array.from(postList.querySelectorAll('article'));
+    let posts = Array.from(postList.querySelectorAll('.poem-card'));
 
     // Search
     function applyFilter() {
       const term = normalize(q.value);
       posts.forEach(a => {
-        const hay = normalize((a.dataset.title||'') + ' ' + (a.dataset.tags||''));
+        const hay = normalize((a.dataset.title || '') + ' ' + (a.dataset.tags || ''));
         a.style.display = hay.includes(term) ? '' : 'none';
       });
     }
     q.addEventListener('input', applyFilter);
 
-    // Sorting (by data-date)
+    // Sorting
     const select = document.getElementById('sort');
     function sortPosts() {
       const val = select.value;
-      const byDateAsc = (a,b) => new Date(a.dataset.date) - new Date(b.dataset.date);
+      const byDateAsc = (a, b) => new Date(a.dataset.date) - new Date(b.dataset.date);
       let arr = posts.slice();
-      if (val === 'date-desc') arr.sort((a,b) => byDateAsc(b,a));
+      if (val === 'date-desc') arr.sort((a, b) => byDateAsc(b, a));
       else arr.sort(byDateAsc);
       arr.forEach(a => postList.appendChild(a));
     }
     select.addEventListener('change', () => { sortPosts(); applyFilter(); });
 
-    // Initial sort (newest first) + filter
+    // Initial
     sortPosts();
     applyFilter();
   </script>

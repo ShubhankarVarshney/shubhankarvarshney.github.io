@@ -1,158 +1,124 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>पहली कविता का शीर्षक</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Merriweather', serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: linear-gradient(to bottom, #fdfcfb, #e2d1c3);
-            color: #333;
-        }
-
-        header {
-            background: #4b2e83;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        nav ul li a {
-            color: #ffd700;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-            color: #ffffff;
-        }
-
-        main {
-            flex: 1;
-            padding: 2rem;
-        }
-
-        .poem-content {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 2rem auto;
-            animation: fadeIn 1.5s ease-in-out;
-            white-space: pre-line; /* Preserves line breaks in text */
-        }
-
-        .poem-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #4b2e83;
-            text-align: center;
-        }
-
-        .poem-content p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        footer {
-            background: #4b2e83;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #ffd700;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .poem-content h1 {
-                font-size: 2rem;
-            }
-
-            .poem-content p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>दीवाने कैसे होते हैं — KavyaRas</title>
+  <meta name="description" content="Shubhankar Varshney — दीवाने कैसे होते हैं (ghazal)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="kavyaras.html">काव्यरस</a></li>
-                <li><a href="shayari.html">शेर</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="poem-content">
-            <h1>दीवाने कैसे होते हैं</h1>
-            <p>
-                दीवाने कैसे होते हैं
-                जनाब इधर देखिए ऐसे होते हैं
+  <div class="site-wrapper">
 
-                मुख पे रहती है मुस्कान पूरे दिन
-                उनसे मिलने के जब आसार होते हैं
-
-                हर रोज़ जाते हैं उम्मीद में मिलने उनसे
-                ना मिलने के चाहे जितने बहाने होते हैं
-
-                सोचते हैं उनके बारे में
-                करने को चाहे जितने काम होते हैं
-
-                देखना ज़रूरी है उनका चेहरा हर रोज़ 
-                अधूरी तलब के शारीरिक नुकसान होते हैं
-
-                अब क्या रहा मेरे बस में 
-                जो वो कहें वोही काम होते हैं
-
-                दोष तो लौ का है जो इतनी प्रगाढ़ है
-                परवाने फालतू में बदनाम होते हैं
-
-            </p>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__header">
+        <a href="index.html" class="sidebar__name">Shubhankar Varshney</a>
+        <div class="sidebar__tagline">PhD · Computer Science</div>
+      </div>
+      <nav class="sidebar__nav">
+        <ul>
+          <li><a href="index.html">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Home
+          </a></li>
+          <li><a href="Shubhankar_Varshney_CV.pdf">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            CV
+          </a></li>
+          <li><a href="hobbies.html">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            Hobbies
+          </a></li>
+          <li><a href="kavyaras.html" class="active">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            KavyaRas
+          </a></li>
+          <li><a href="shayari.html">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Shayari
+          </a></li>
+        </ul>
+      </nav>
+      <div class="sidebar__footer">
+        <div class="sidebar__contact">
+          <a href="mailto:svarshn@purdue.edu" class="sidebar__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            svarshn@purdue.edu
+          </a>
         </div>
+      </div>
+    </aside>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main -->
+    <main class="main-content">
+      <div class="content-area">
+
+        <a href="kavyaras.html" class="poem-back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          काव्यरस पर वापस
+        </a>
+
+        <div class="poem-reading">
+          <h1 class="hi">दीवाने कैसे होते हैं</h1>
+          <div class="poem-accent"></div>
+          <div class="poem-text hi">दीवाने कैसे होते हैं
+जनाब इधर देखिए ऐसे होते हैं
+
+मुख पे रहती है मुस्कान पूरे दिन
+उनसे मिलने के जब आसार होते हैं
+
+हर रोज़ जाते हैं उम्मीद में मिलने उनसे
+ना मिलने के चाहे जितने बहाने होते हैं
+
+सोचते हैं उनके बारे में
+करने को चाहे जितने काम होते हैं
+
+देखना ज़रूरी है उनका चेहरा हर रोज़ 
+अधूरी तलब के शारीरिक नुकसान होते हैं
+
+अब क्या रहा मेरे बस में 
+जो वो कहें वोही काम होते हैं
+
+दोष तो लौ का है जो इतनी प्रगाढ़ है
+परवाने फालतू में बदनाम होते हैं</div>
+        </div>
+
+      </div>
+
+      <footer class="site-footer">
+        <p>© <span id="year"></span> Shubhankar Varshney</p>
+      </footer>
     </main>
-    <footer>
-        <p>&copy; 2024 आपका नाम. <a href="#">संपर्क करें</a></p>
-    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    hamburger.addEventListener('click', () => {
+      const open = sidebar.classList.toggle('is-open');
+      hamburger.classList.toggle('is-active');
+      overlay.style.display = open ? 'block' : 'none';
+      requestAnimationFrame(() => overlay.classList.toggle('is-visible', open));
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('is-open');
+      hamburger.classList.remove('is-active');
+      overlay.classList.remove('is-visible');
+      setTimeout(() => overlay.style.display = 'none', 300);
+    });
+  </script>
 </body>
 </html>

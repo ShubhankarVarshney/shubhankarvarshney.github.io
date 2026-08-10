@@ -2,192 +2,214 @@
 <html lang="hi">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>शेर / Shayari</title>
-  <meta name="description" content="Shubhankar Varshney — Shayari / Sher list">
-  <style>
-    :root{
-      --bg:#ffffff; --fg:#111111; --muted:#666; --rule:#e5e7eb; --link:#1a0dab;
-      --card:#fafafa; --btn:#f4f4f5; --btnb:#d1d5db;
-      --max: 900px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--fg);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans Devanagari",sans-serif;line-height:1.7}
-    a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
-    header{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0;z-index:10}
-    .wrap{max-width:var(--max);margin:0 auto;padding:16px}
-    .brand a{font-weight:600;font-size:20px;color:var(--fg)}
-    h1{font-size:28px;margin:18px 0 6px}
-    .hi{font-family:"Noto Sans Devanagari",system-ui,sans-serif}
-    .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px}
-    .search{flex:1 1 320px;display:flex;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:8px;padding:10px 12px;background:#fff}
-    .search input{border:0;outline:0;background:transparent;width:100%}
-    .tag{border:1px solid var(--rule);border-radius:8px;padding:10px 12px;background:#fff}
-    .list{display:block;margin:0;padding:0}
-    article.sher{list-style:none;border-bottom:1px solid var(--rule);padding:14px 0}
-    article.sher:last-child{border-bottom:0}
-    .couplet{margin:0;font-size:19px}
-    .couplet br{content:""; display:block; margin-top:6px}
-    .actions{display:flex;gap:8px;margin-top:10px}
-    button.copy{appearance:none;border:1px solid var(--btnb);background:var(--btn);
-      border-radius:8px;padding:6px 10px;cursor:pointer;font-size:14px}
-    button.copy:active{transform:translateY(1px)}
-    .more{display:flex;justify-content:center;margin:18px 0}
-    #loadMore{appearance:none;border:1px solid var(--btnb);background:#fff;padding:10px 14px;border-radius:10px;cursor:pointer}
-    #loadMore:disabled{opacity:.5;cursor:not-allowed}
-    footer{border-top:1px solid var(--rule);margin-top:20px}
-    @media (min-width:760px){ h1{font-size:32px} .couplet{font-size:20px} }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>शेर / Shayari — Shubhankar Varshney</title>
+  <meta name="description" content="Shubhankar Varshney — Shayari / Sher collection">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <!-- Only homepage link via your name, per your preference -->
-      <div class="brand"><a href="/index.html">Shubhankar Varshney</a></div>
-    </div>
-  </header>
+  <div class="site-wrapper">
 
-  <main class="wrap">
-    <h1 class="hi">शेर</h1>
-    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__header">
+        <a href="index.html" class="sidebar__name">Shubhankar Varshney</a>
+        <div class="sidebar__tagline">PhD · Computer Science</div>
+      </div>
+      <nav class="sidebar__nav">
+        <ul>
+          <li><a href="index.html">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Home
+          </a></li>
+          <li><a href="Shubhankar_Varshney_CV.pdf">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            CV
+          </a></li>
+          <li><a href="hobbies.html">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            Hobbies
+          </a></li>
+          <li><a href="kavyaras.html">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            KavyaRas
+          </a></li>
+          <li><a href="shayari.html" class="active">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Shayari
+          </a></li>
+        </ul>
+      </nav>
+      <div class="sidebar__footer">
+        <div class="sidebar__contact">
+          <a href="mailto:svarshn@purdue.edu" class="sidebar__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            svarshn@purdue.edu
+          </a>
+        </div>
+      </div>
+    </aside>
 
-    <div class="controls">
-      <label class="search" aria-label="Search">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" role="img">
-          <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <input id="q" type="search" placeholder="मिसरा/शब्द/टैग खोजें…">
-      </label>
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-      <select id="tag" class="tag" aria-label="Filter by tag">
-        <option value="">सभी टैग</option>
-        <!-- JS will auto-populate tags -->
-      </select>
-    </div>
+    <!-- Main -->
+    <main class="main-content">
+      <div class="page-hero">
+        <h1 class="hi">शेर</h1>
+        <div class="hero-accent-line"></div>
+      </div>
 
-    <!--
-      HOW TO ADD A SHER:
-      - Duplicate an <article class="sher"> block.
-      - Put your two lines inside <p class="couplet hi"> …<br>… </p>
-      - Optionally set data-tags as a comma-separated list (used for filtering).
-      - NO author, NO date by design.
-    -->
-    <section id="list" class="list">
+      <div class="content-area">
 
-      <article id="s-1" class="sher" data-tags="विचार,ख़ामोशी">
-        <p class="couplet hi">हमें वहम था कि बाग अपना है 
+        <div class="controls fade-in">
+          <label class="search-box" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input id="q" type="search" placeholder="मिसरा/शब्द/टैग खोजें…" aria-label="Search">
+          </label>
+
+          <select id="tag" class="tag-select" aria-label="Filter by tag">
+            <option value="">सभी टैग</option>
+          </select>
+        </div>
+
+        <section id="list" class="fade-in-delayed">
+
+          <div id="s-1" class="sher-card" data-tags="विचार,ख़ामोशी">
+            <p class="couplet hi">हमें वहम था कि बाग अपना है
 <br>तूफान के बाद पता चला कि सूखे पत्तों पर भी हक़ हवाओं का है</p>
-        <div class="actions">
-          <button class="copy" data-target="s-1">कॉपी</button>
+            <div class="sher-actions">
+              <button class="btn-copy" data-target="s-1">कॉपी</button>
+            </div>
+          </div>
+
+          <div id="s-2" class="sher-card" data-tags="ख़्वाब,उम्मीद">
+            <p class="couplet hi">मेरे तलब के तकाज़े पे थोड़ा गौर तो कर मैं तेरे पास आया हूं खुदा के होते हुए</p>
+            <div class="sher-actions">
+              <button class="btn-copy" data-target="s-2">कॉपी</button>
+            </div>
+          </div>
+
+          <div id="s-3" class="sher-card" data-tags="धैर्य,समय">
+            <p class="couplet hi">हानि लाभ जीवन मरण यश अपयश विधी हाथ</p>
+            <div class="sher-actions">
+              <button class="btn-copy" data-target="s-3">कॉपी</button>
+            </div>
+          </div>
+
+        </section>
+
+        <div class="load-more-wrap">
+          <button id="loadMore" class="btn-load-more">और दिखाएँ</button>
         </div>
-      </article>
 
-      <article id="s-2" class="sher" data-tags="ख़्वाब,उम्मीद">
-        <p class="couplet hi">मेरे तलब के तकाज़े पे थोड़ा गौर तो कर मैं तेरे पास आया हूं खुदा के होते हुए</p>
-        <div class="actions">
-          <button class="copy" data-target="s-2">कॉपी</button>
-        </div>
-      </article>
+      </div>
 
-      <article id="s-3" class="sher" data-tags="धैर्य,समय">
-        <p class="couplet hi">हानि लाभ जीवन मरण यश अपयश विधी हाथ</p>
-        <div class="actions">
-          <button class="copy" data-target="s-3">कॉपी</button>
-        </div>
-      </article>
+      <footer class="site-footer">
+        <p>© <span id="y"></span> Shayari — Shubhankar Varshney</p>
+      </footer>
+    </main>
 
-      <!-- Add more shers above this line -->
-    </section>
-
-    <div class="more">
-      <button id="loadMore">और दिखाएँ</button>
-    </div>
-
-    <footer class="wrap" style="padding:16px 0;">
-      <p>© <span id="y"></span> Shayari</p>
-    </footer>
-  </main>
+  </div>
 
   <script>
     // Year
     document.getElementById('y').textContent = new Date().getFullYear();
 
+    // Mobile sidebar
+    const hamburger = document.getElementById('hamburger');
+    const sidebarEl = document.getElementById('sidebar');
+    const overlayEl = document.getElementById('sidebarOverlay');
+    hamburger.addEventListener('click', () => {
+      const open = sidebarEl.classList.toggle('is-open');
+      hamburger.classList.toggle('is-active');
+      overlayEl.style.display = open ? 'block' : 'none';
+      requestAnimationFrame(() => overlayEl.classList.toggle('is-visible', open));
+    });
+    overlayEl.addEventListener('click', () => {
+      sidebarEl.classList.remove('is-open');
+      hamburger.classList.remove('is-active');
+      overlayEl.classList.remove('is-visible');
+      setTimeout(() => overlayEl.style.display = 'none', 300);
+    });
+
     // Elements & helpers
     const list = document.getElementById('list');
-    let items = Array.from(list.querySelectorAll('article.sher'));
-    const norm = s => (s||'').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'').trim();
+    let items = Array.from(list.querySelectorAll('.sher-card'));
+    const norm = s => (s || '').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '').trim();
 
     // Build tags dropdown
     const tagSel = document.getElementById('tag');
     const tagSet = new Set();
-    items.forEach(a => (a.dataset.tags||'').split(',').map(t=>t.trim()).filter(Boolean).forEach(t=>tagSet.add(t)));
-    Array.from(tagSet).sort((a,b)=>a.localeCompare(b,'hi')).forEach(t=>{
-      const opt=document.createElement('option'); opt.value=t; opt.textContent=t; tagSel.appendChild(opt);
+    items.forEach(a => (a.dataset.tags || '').split(',').map(t => t.trim()).filter(Boolean).forEach(t => tagSet.add(t)));
+    Array.from(tagSet).sort((a, b) => a.localeCompare(b, 'hi')).forEach(t => {
+      const opt = document.createElement('option'); opt.value = t; opt.textContent = t; tagSel.appendChild(opt);
     });
 
     // Search + Tag filter
     const q = document.getElementById('q');
-    function applyFilter(){
+    function applyFilter() {
       const term = norm(q.value);
       const tag = tagSel.value;
-      let shown = 0;
-      items.forEach(a=>{
+      items.forEach(a => {
         const text = norm(a.querySelector('.couplet')?.textContent) + ' ' + norm(a.dataset.tags);
-        const tagOK = !tag || (a.dataset.tags||'').split(',').map(s=>s.trim()).includes(tag);
+        const tagOK = !tag || (a.dataset.tags || '').split(',').map(s => s.trim()).includes(tag);
         const show = text.includes(term) && tagOK;
         a.style.display = show ? '' : 'none';
-        if(show) shown++;
       });
-      // If user filters, make sure Load More doesn't hide matching results
-      if(term || tag){ document.getElementById('loadMore').disabled = true; }
+      if (term || tag) { document.getElementById('loadMore').disabled = true; }
       else { document.getElementById('loadMore').disabled = (visibleCount() >= items.length); }
     }
     q.addEventListener('input', applyFilter);
     tagSel.addEventListener('change', applyFilter);
 
-    // Client-side pagination (like Rekhta list pages feeling)
-    const PAGE = 10; // how many to show initially / per click
-    let shown = 0;
-    function visibleCount(){
+    // Client-side pagination
+    const PAGE = 10;
+    function visibleCount() {
       return items.filter(a => a.style.display !== 'none').length;
     }
-    function showNext(batch = PAGE){
+    function showNext(batch = PAGE) {
       const term = norm(q.value);
       const tag = tagSel.value;
       let count = 0;
-      for(let i=0;i<items.length;i++){
+      for (let i = 0; i < items.length; i++) {
         const a = items[i];
         const hiddenByFilter = a.style.display === 'none' && (term || tag);
-        if(hiddenByFilter) continue; // filtered out
-        if(a.dataset._visible === '1') continue; // already shown during pagination
+        if (hiddenByFilter) continue;
+        if (a.dataset._visible === '1') continue;
         a.dataset._visible = '1';
         a.style.removeProperty('display');
         count++;
-        if(count >= batch) break;
+        if (count >= batch) break;
       }
-      // Disable when done
       const btn = document.getElementById('loadMore');
       const remaining = items.filter(a => a.dataset._visible !== '1').length;
       btn.disabled = remaining === 0;
     }
-    // Initialize: hide all, then show first PAGE
-    function initPaging(){
-      items.forEach(a=>{ a.dataset._visible = '0'; a.style.display='none'; });
+    function initPaging() {
+      items.forEach(a => { a.dataset._visible = '0'; a.style.display = 'none'; });
       showNext(PAGE);
     }
-    document.getElementById('loadMore').addEventListener('click', ()=> showNext(PAGE));
+    document.getElementById('loadMore').addEventListener('click', () => showNext(PAGE));
 
     // Copy handler
-    list.addEventListener('click', (e)=>{
-      const btn = e.target.closest('button.copy');
-      if(!btn) return;
+    list.addEventListener('click', (e) => {
+      const btn = e.target.closest('.btn-copy');
+      if (!btn) return;
       const id = btn.dataset.target;
       const el = document.getElementById(id);
       const text = (el.querySelector('.couplet')?.textContent || '').trim();
-      navigator.clipboard.writeText(text).then(()=>{
-        const old = btn.textContent; btn.textContent='कॉपी हो गया';
-        setTimeout(()=>btn.textContent=old,1000);
+      navigator.clipboard.writeText(text).then(() => {
+        const old = btn.textContent; btn.textContent = 'कॉपी हो गया';
+        setTimeout(() => btn.textContent = old, 1000);
       });
     });
 
