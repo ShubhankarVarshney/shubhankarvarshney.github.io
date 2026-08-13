@@ -631,11 +631,7 @@ h1, h2, h3, h4 {
 }
 
 .drawing-card__caption {
-  padding: 10px 14px;
-  font-size: 13px;
-  color: var(--fg-muted);
-  text-align: center;
-  font-weight: 400;
+  display: none;
 }
 
 /* ---- Lightbox ---- */
@@ -666,14 +662,7 @@ h1, h2, h3, h4 {
 }
 
 .lightbox__caption {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  text-align: center;
-  max-width: 80%;
+  display: none;
 }
 
 .lightbox__close {
