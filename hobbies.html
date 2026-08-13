@@ -1,73 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hobbies — Shubhankar Varshney</title>
-  <meta name="description" content="Shubhankar Varshney — Hobbies and interests">
+  <meta name="description" content="Shubhankar Varshney — Hobbies, drawings and interests">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/et-book/3.1.1/et-book.min.css">
   <link rel="stylesheet" href="site.css">
 </head>
+
 <body>
   <div class="site-wrapper">
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar__header">
-        <a href="index.html" class="sidebar__name">Shubhankar Varshney</a>
-        <div class="sidebar__tagline">PhD · Computer Science</div>
+    <!-- Top Navigation -->
+    <header class="topnav">
+      <div class="topnav__inner">
+        <a href="index.html" class="topnav__name">Shubhankar Varshney</a>
+        <nav>
+          <ul class="topnav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Shubhankar_Varshney_CV.pdf">CV</a></li>
+            <li><a href="hobbies.html" class="active">Hobbies</a></li>
+            <li><a href="kavyaras.html">KavyaRas</a></li>
+            <li><a href="shayari.html">Shayari</a></li>
+          </ul>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
       </div>
-      <nav class="sidebar__nav">
-        <ul>
-          <li><a href="index.html">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            Home
-          </a></li>
-          <li><a href="Shubhankar_Varshney_CV.pdf">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            CV
-          </a></li>
-          <li><a href="hobbies.html" class="active">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-            Hobbies
-          </a></li>
-          <li><a href="kavyaras.html">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-            KavyaRas
-          </a></li>
-          <li><a href="shayari.html">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-            Shayari
-          </a></li>
-        </ul>
-      </nav>
-      <div class="sidebar__footer">
-        <div class="sidebar__contact">
-          <a href="mailto:svarshn@purdue.edu" class="sidebar__contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            svarshn@purdue.edu
-          </a>
-        </div>
+      <div class="topnav__mobile" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="Shubhankar_Varshney_CV.pdf">CV</a>
+        <a href="hobbies.html" class="active">Hobbies</a>
+        <a href="kavyaras.html">KavyaRas</a>
+        <a href="shayari.html">Shayari</a>
       </div>
-    </aside>
-
-    <!-- Hamburger -->
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    </header>
 
     <!-- Main -->
     <main class="main-content">
-      <div class="page-hero">
+      <div class="page-title">
         <h1>Hobbies</h1>
-        <div class="hero-accent-line"></div>
+        <div class="title-accent"></div>
       </div>
 
       <div class="content-area fade-in">
-        <p style="font-size: 17px; line-height: 1.9; max-width: 700px;">I play cricket, badminton, basketball, volleyball and any sport that interests me. I write nazms, ghazals and kavitas, some of which you can find in <a href="kavyaras.html">KavyaRas</a>. I have written many essays and some short fiction stories as well. I enjoy all endeavours of human intellect.</p>
+        <p class="hobbies-intro">I play cricket, badminton, basketball,
+          volleyball and any sport that interests me. I write nazms, ghazals and kavitas, some of which you can find in
+          <a href="kavyaras.html">KavyaRas</a>. I have written many essays and some short fiction stories as well.</p>
+
+        <!-- My Drawings -->
+        <section class="drawings-section">
+          <h2>My Drawings</h2>
+          <div class="drawing-grid" id="myDrawings">
+            <div class="drawing-card" data-src="zeref X mavis.jpg" data-caption="Zeref × Mavis">
+              <img src="zeref X mavis.jpg" alt="Zeref × Mavis" loading="lazy">
+              <div class="drawing-card__caption">Zeref × Mavis</div>
+            </div>
+            <div class="drawing-card" data-src="Fairy tail X OPM.jpg" data-caption="Fairy Tail × OPM">
+              <img src="Fairy tail X OPM.jpg" alt="Fairy Tail × OPM" loading="lazy">
+              <div class="drawing-card__caption">Fairy Tail × OPM</div>
+            </div>
+            <div class="drawing-card" data-src="Comic strip.jpg" data-caption="Comic Strip">
+              <img src="Comic strip.jpg" alt="Comic Strip" loading="lazy">
+              <div class="drawing-card__caption">Comic Strip</div>
+            </div>
+            <div class="drawing-card" data-src="gohan freshers.jpg" data-caption="Gohan – Freshers">
+              <img src="gohan freshers.jpg" alt="Gohan – Freshers" loading="lazy">
+              <div class="drawing-card__caption">Gohan – Freshers</div>
+            </div>
+            <div class="drawing-card" data-src="God Tells Lies.jpg" data-caption="God Tells Lies">
+              <img src="God Tells Lies.jpg" alt="God Tells Lies" loading="lazy">
+              <div class="drawing-card__caption">God Tells Lies</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Drawings by Friends -->
+        <section class="drawings-section">
+          <h2>Drawings by Friends</h2>
+          <div class="drawing-grid" id="friendDrawings">
+            <div class="drawing-card" data-src="Caricature.jpg" data-caption="Caricature">
+              <img src="Caricature.jpg" alt="Caricature" loading="lazy">
+              <div class="drawing-card__caption">Caricature</div>
+            </div>
+            <div class="drawing-card" data-src="dashing.jpg" data-caption="Dashing">
+              <img src="dashing.jpg" alt="Dashing" loading="lazy">
+              <div class="drawing-card__caption">Dashing</div>
+            </div>
+            <div class="drawing-card" data-src="Goku Context free.jpg" data-caption="Goku – Context Free">
+              <img src="Goku Context free.jpg" alt="Goku – Context Free" loading="lazy">
+              <div class="drawing-card__caption">Goku – Context Free</div>
+            </div>
+            <div class="drawing-card" data-src="Free flow.jpg" data-caption="Free Flow">
+              <img src="Free flow.jpg" alt="Free Flow" loading="lazy">
+              <div class="drawing-card__caption">Free Flow</div>
+            </div>
+            <div class="drawing-card" data-src="Amphitheatre ISI.jpg" data-caption="Amphitheatre ISI">
+              <img src="Amphitheatre ISI.jpg" alt="Amphitheatre ISI" loading="lazy">
+              <div class="drawing-card__caption">Amphitheatre ISI</div>
+            </div>
+            <div class="drawing-card" data-src="Rainbow Eyes.jpg" data-caption="Rainbow Eyes">
+              <img src="Rainbow Eyes.jpg" alt="Rainbow Eyes" loading="lazy">
+              <div class="drawing-card__caption">Rainbow Eyes</div>
+            </div>
+            <div class="drawing-card" data-src="A Puzzle.jpg" data-caption="A Puzzle">
+              <img src="A Puzzle.jpg" alt="A Puzzle" loading="lazy">
+              <div class="drawing-card__caption">A Puzzle</div>
+            </div>
+          </div>
+        </section>
       </div>
 
       <footer class="site-footer">
@@ -77,23 +131,72 @@
 
   </div>
 
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous">‹</button>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next">›</button>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox__caption" id="lightboxCaption"></div>
+  </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const hamburger = document.getElementById('hamburger');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('sidebarOverlay');
-    hamburger.addEventListener('click', () => {
-      const open = sidebar.classList.toggle('is-open');
-      hamburger.classList.toggle('is-active');
-      overlay.style.display = open ? 'block' : 'none';
-      requestAnimationFrame(() => overlay.classList.toggle('is-visible', open));
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('is-open');
     });
-    overlay.addEventListener('click', () => {
-      sidebar.classList.remove('is-open');
-      hamburger.classList.remove('is-active');
-      overlay.classList.remove('is-visible');
-      setTimeout(() => overlay.style.display = 'none', 300);
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+
+    const allCards = Array.from(document.querySelectorAll('.drawing-card'));
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const card = allCards[index];
+      lightboxImg.src = card.dataset.src;
+      lightboxImg.alt = card.dataset.caption || '';
+      lightboxCaption.textContent = card.dataset.caption || '';
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    function navigate(dir) {
+      currentIndex = (currentIndex + dir + allCards.length) % allCards.length;
+      openLightbox(currentIndex);
+    }
+
+    allCards.forEach((card, i) => {
+      card.addEventListener('click', () => openLightbox(i));
+    });
+
+    lightboxClose.addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); navigate(-1); });
+    lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); navigate(1); });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
     });
   </script>
 </body>
+
 </html>
