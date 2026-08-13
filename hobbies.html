@@ -66,25 +66,20 @@
         <section class="drawings-section">
           <h2>My Drawings</h2>
           <div class="drawing-grid" id="myDrawings">
-            <div class="drawing-card" data-src="zeref X mavis.jpg" data-caption="Zeref × Mavis">
+            <div class="drawing-card" data-src="zeref X mavis.jpg">
               <img src="zeref X mavis.jpg" alt="Zeref × Mavis" loading="lazy">
-              <div class="drawing-card__caption">Zeref × Mavis</div>
             </div>
-            <div class="drawing-card" data-src="Fairy tail X OPM.jpg" data-caption="Fairy Tail × OPM">
+            <div class="drawing-card" data-src="Fairy tail X OPM.jpg">
               <img src="Fairy tail X OPM.jpg" alt="Fairy Tail × OPM" loading="lazy">
-              <div class="drawing-card__caption">Fairy Tail × OPM</div>
             </div>
-            <div class="drawing-card" data-src="Comic strip.jpg" data-caption="Comic Strip">
+            <div class="drawing-card" data-src="Comic strip.jpg">
               <img src="Comic strip.jpg" alt="Comic Strip" loading="lazy">
-              <div class="drawing-card__caption">Comic Strip</div>
             </div>
-            <div class="drawing-card" data-src="gohan freshers.jpg" data-caption="Gohan – Freshers">
+            <div class="drawing-card" data-src="gohan freshers.jpg">
               <img src="gohan freshers.jpg" alt="Gohan – Freshers" loading="lazy">
-              <div class="drawing-card__caption">Gohan – Freshers</div>
             </div>
-            <div class="drawing-card" data-src="God Tells Lies.jpg" data-caption="God Tells Lies">
+            <div class="drawing-card" data-src="God Tells Lies.jpg">
               <img src="God Tells Lies.jpg" alt="God Tells Lies" loading="lazy">
-              <div class="drawing-card__caption">God Tells Lies</div>
             </div>
           </div>
         </section>
@@ -93,33 +88,26 @@
         <section class="drawings-section">
           <h2>Drawings by Friends</h2>
           <div class="drawing-grid" id="friendDrawings">
-            <div class="drawing-card" data-src="Caricature.jpg" data-caption="Caricature">
+            <div class="drawing-card" data-src="Caricature.jpg">
               <img src="Caricature.jpg" alt="Caricature" loading="lazy">
-              <div class="drawing-card__caption">Caricature</div>
             </div>
-            <div class="drawing-card" data-src="dashing.jpg" data-caption="Dashing">
+            <div class="drawing-card" data-src="dashing.jpg">
               <img src="dashing.jpg" alt="Dashing" loading="lazy">
-              <div class="drawing-card__caption">Dashing</div>
             </div>
-            <div class="drawing-card" data-src="Goku Context free.jpg" data-caption="Goku – Context Free">
+            <div class="drawing-card" data-src="Goku Context free.jpg">
               <img src="Goku Context free.jpg" alt="Goku – Context Free" loading="lazy">
-              <div class="drawing-card__caption">Goku – Context Free</div>
             </div>
-            <div class="drawing-card" data-src="Free flow.jpg" data-caption="Free Flow">
+            <div class="drawing-card" data-src="Free flow.jpg">
               <img src="Free flow.jpg" alt="Free Flow" loading="lazy">
-              <div class="drawing-card__caption">Free Flow</div>
             </div>
-            <div class="drawing-card" data-src="Amphitheatre ISI.jpg" data-caption="Amphitheatre ISI">
+            <div class="drawing-card" data-src="Amphitheatre ISI.jpg">
               <img src="Amphitheatre ISI.jpg" alt="Amphitheatre ISI" loading="lazy">
-              <div class="drawing-card__caption">Amphitheatre ISI</div>
             </div>
-            <div class="drawing-card" data-src="Rainbow Eyes.jpg" data-caption="Rainbow Eyes">
+            <div class="drawing-card" data-src="Rainbow Eyes.jpg">
               <img src="Rainbow Eyes.jpg" alt="Rainbow Eyes" loading="lazy">
-              <div class="drawing-card__caption">Rainbow Eyes</div>
             </div>
-            <div class="drawing-card" data-src="A Puzzle.jpg" data-caption="A Puzzle">
+            <div class="drawing-card" data-src="A Puzzle.jpg">
               <img src="A Puzzle.jpg" alt="A Puzzle" loading="lazy">
-              <div class="drawing-card__caption">A Puzzle</div>
             </div>
           </div>
         </section>
@@ -138,7 +126,6 @@
     <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous">‹</button>
     <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next">›</button>
     <img id="lightboxImg" src="" alt="">
-    <div class="lightbox__caption" id="lightboxCaption"></div>
   </div>
 
   <script>
@@ -154,7 +141,6 @@
     // Lightbox
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxCaption = document.getElementById('lightboxCaption');
     const lightboxClose = document.getElementById('lightboxClose');
     const lightboxPrev = document.getElementById('lightboxPrev');
     const lightboxNext = document.getElementById('lightboxNext');
@@ -167,7 +153,6 @@
       const card = allCards[index];
       lightboxImg.src = card.dataset.src;
       lightboxImg.alt = card.dataset.caption || '';
-      lightboxCaption.textContent = card.dataset.caption || '';
       lightbox.classList.add('is-open');
       document.body.style.overflow = 'hidden';
     }
